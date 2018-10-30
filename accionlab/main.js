@@ -4,7 +4,7 @@
 	app.factory('mymethod', function($http){
 		return {
 			addlist: function(callback){
-				$http.get('http://jsonplaceholder.typicode.com/posts').then(callback);
+				$http.post('http://jsonplaceholder.typicode.com/posts').then(callback);
 			}
 		};
 	});
