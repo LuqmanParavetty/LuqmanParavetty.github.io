@@ -3,7 +3,6 @@ var uidClick = element(by.partialButtonText('User ID'));
 var titleClick = element(by.partialButtonText('Title'));
 var bodyClick = element(by.partialButtonText('body'));
 
-
 var id = element(by.repeater('datas').column('data.id').row(0));
 var idLast = element(by.repeater('datas').column('data.id').row(99));
 
@@ -15,8 +14,6 @@ var titleLast = element(by.repeater('datas').column('data.title').row(99));
 
 var body = element(by.repeater('datas').column('data.body').row(0));
 var bodyLast = element(by.repeater('datas').column('data.body').row(99));
-
-
 
 it('should check srting in first row ID first colum ascending descending order', function() {
   expect(id.getText()).toBe('1');

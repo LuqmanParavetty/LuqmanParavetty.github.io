@@ -1,54 +1,53 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title>Accionlabs test</title>
-		<link href="style.css" rel="stylesheet" type="text/css">
-		<script src="https://code.angularjs.org/snapshot/angular.min.js"></script>
-		<script src="main.js"></script>
-	</head>
-	<body ng-app="accionlab">
-		<div ng-controller="jschallengeController">
-				<div class="wrapper">
-					<div class="header">
-							<div class="items" ng-click="sorting('id')">
-								<b ng-show="firstSelect == 'id' && !directionFlag">&#x2191;</b>
-								<b ng-show="firstSelect == 'id' && directionFlag">&#x2193;</b>
-								ID
-							</div>
-							<div class="items"ng-click="sorting('userId')">
-								<b ng-show="firstSelect == 'userId' && !directionFlag">&#x2191;</b>
-								<b ng-show="firstSelect == 'userId' && directionFlag">&#x2193;</b>
-								User ID
-							</div>
-							<div class="items"ng-click="sorting('title')">
-								<b ng-show="firstSelect == 'title' && !directionFlag">&#x2191;</b>
-								<b ng-show="firstSelect == 'title' && directionFlag">&#x2193;</b>
-								Title
-							</div>
-							<div class="items"ng-click="sorting('body')">
-								<b ng-show="firstSelect == 'body' && !directionFlag">&#x2191;</b>
-								<b ng-show="firstSelect == 'body' && directionFlag">&#x2193;</b>
-								body
-							</div>
-					</div>
-					<div class="dataWrapper">
-						<div class="rows" ng-repeat="data in datas | orderBy:sortByWhat:directionFlag">
-								<div class="items">
-									{{data.id}}
-								</div>
-								<div class="items">
-									{{data.userId}}
-								</div>
-								<div class="items">
-									{{data.title}}
-								</div>
-								<div class="items">
-									{{data.body}}
-								</div>
-							</div>
-						</div>
-					</div>
-		</div>
-	</body>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Accionlabs test</title>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="https://code.angularjs.org/snapshot/angular.min.js"></script>
+  <script src="main.js"></script>
+</head>
+
+<body ng-app="accionlab">
+  <div ng-controller="jschallengeController">
+    <div class="wrapper">
+      <div class="header">
+        <div class="items" ng-click="sorting('id')">
+          <b ng-show="firstSelect == 'id' && !directionFlag">&#x2191;</b>
+          <b ng-show="firstSelect == 'id' && directionFlag">&#x2193;</b> ID
+        </div>
+        <div class="items" ng-click="sorting('userId')">
+          <b ng-show="firstSelect == 'userId' && !directionFlag">&#x2191;</b>
+          <b ng-show="firstSelect == 'userId' && directionFlag">&#x2193;</b> User ID
+        </div>
+        <div class="items" ng-click="sorting('title')">
+          <b ng-show="firstSelect == 'title' && !directionFlag">&#x2191;</b>
+          <b ng-show="firstSelect == 'title' && directionFlag">&#x2193;</b> Title
+        </div>
+        <div class="items" ng-click="sorting('body')">
+          <b ng-show="firstSelect == 'body' && !directionFlag">&#x2191;</b>
+          <b ng-show="firstSelect == 'body' && directionFlag">&#x2193;</b> body
+        </div>
+      </div>
+      <div class="dataWrapper">
+        <div class="rows" ng-repeat="data in datas | orderBy:sortByWhat:directionFlag">
+          <div class="items">
+            {{data.id}}
+          </div>
+          <div class="items">
+            {{data.userId}}
+          </div>
+          <div class="items">
+            {{data.title}}
+          </div>
+          <div class="items">
+            {{data.body}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
